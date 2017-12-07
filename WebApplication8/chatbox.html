@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+        function Abc(value, id) {
+            document.getElementById(id).value = value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Text Box</h1>
+    <input onkeyup="Abc(this.value, 'text2')" id="text1" type="text" name="name" value=" " />
+    <br />
+    <input onkeyup="Abc(this.value, 'text1')" id="text2" type="text" name="name" value=" " />
+</body>
+</html>

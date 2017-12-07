@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>char counter</title>
+    <script>
+        function charLength(element) {
+            document.getElementById('count').innerHTML = 'Characters left: ' + (50 - element.value.length);
+        }
+    </script>
+</head>
+<body>
+    <textarea onkeyup="charLength(this)" maxlength="50"></textarea>
+    <p id="count"></p>
+</body>
+</html>

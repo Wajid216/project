@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+        var studentData = [
+            { name: "Wajid", stu_class: "BCSC", roll_num: "5454" },
+            { name: "Israr", stu_class: "BCSC", roll_num: "54552" },
+            { name: "Adil", stu_class: "BCSC", roll_num: "54854" }
+        ];
+        getStudentData();
+        function getStudentData() {
+            var ul;
+            var li = [];
+            for (key in studentData) {
+                li = "<li>" +
+                    "<span>" + studentData[key].name +"</span>" +
+                    "<span>" + studentData[key].stu_class +"</span>" +
+                    "<span>" + studentData[key].roll_num +"</span>" +
+                    "</li>";
+                ul = "<ul>" + li + "</ul>";
+            }
+            document.body.appendChild(ul);
+        }
+    </script>
+</head>
+<body>
+    <ul class="list">
+
+    </ul>
+</body>
+</html>

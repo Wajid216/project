@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tic tac toe</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script>
+        function onLoad() {
+            var a = $(".btns").find("button");
+            var value = 0;
+            for (var i = 0; i < a.length; i++) {
+                a[i].onclick = function () {
+                    if (!this.attributes.btnValue) {
+                        value++;
+
+                        this.attributes.btnValue = value
+
+                        if (value % 2 == 0) {
+                            this.style.background = 'red';
+                        } else {
+                            this.style.background = 'green';
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="onLoad()">
+    <div class="btns">
+        <div>
+            <button class="btn">+</button>
+            <button class="btn">+</button>
+            <button class="btn">+</button>
+        </div>
+        <div>
+            <button class="btn">+</button>
+            <button class="btn">+</button>
+            <button class="btn">+</button>
+        </div>
+        <div>
+            <button class="btn">+</button>
+            <button class="btn">+</button>
+            <button class="btn">+</button>
+        </div>
+    </div>
+</body>
+</html>
